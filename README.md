@@ -87,8 +87,7 @@ git status
 
   ```
   git remote add origin git@github.com:用户名/仓库名.git
-  
-  git remote add origin git@github.com:用户名/仓库名.git 添加第二个仓库
+  添加第二个仓库也是这个命令
   ```
 
 * 第一次推送
@@ -103,6 +102,13 @@ git status
   ```
   git push origin master
   origin仓库名 master分支名
+  多个远程仓库需要不同的仓库名
+  ```
+
+* 删除已经添加的远程库：
+
+  ```
+  git remote rm origin(远程库名称)
   ```
 
 ### Git分支管理
@@ -269,4 +275,3 @@ git status
   ```
 
 
-测试推送到两个不同的仓库
