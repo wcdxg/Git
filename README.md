@@ -1,5 +1,12 @@
 ## Git命令
 
+###### 设置用户名和邮箱地址
+
+```
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+```
+
 
 ###### Git初始化
 
