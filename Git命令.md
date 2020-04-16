@@ -133,6 +133,8 @@ git status
 
   ```
   git branch -d dev
+  
+  如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>强行删除
   ```
 
 * 查看分支合并情况
@@ -142,10 +144,10 @@ git status
   git log --graph	//详细信息
   ```
 
-* 保存工作状态(未commit时切换分支需要保存)
+* 保存工作状态(未commit时切换分支需要保存工作状态)
 
   ```
-  git stash
+  git stash  保存状态前需要先add追踪
   ```
 
 * 恢复工作状态
@@ -170,4 +172,44 @@ git status
   git cherry-pick 4c805e2 
   ```
 
+* 查看远程库信息
+
+  ```
+  git remote 
+  git remote -v  查看详细信息
+  ```
+
+* 本地推送分支要远程库
+
+  ```
+  使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交
+  ```
+
+* 本地创建远程分支对应的分支
+
+  ```
+  git checkout -b branch-name origin/branch-name
+  git switch -c branch-name origin/branch-name
+  本地和远程分支的名称最好一致
+  ```
+
+* 建立本地分支和远程分支的关联
+
+  ```
+  git branch --set-upstream branch-name origin/branch-name
+  ```
+
+* 从远程抓取分支
+
+  ```
+  git pull 
+  ```
+
+* 删除远程仓库分支
+
+  ```
+  git push origin --delete dev
+  ```
+
   
+
