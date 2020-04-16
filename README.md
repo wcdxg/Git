@@ -268,3 +268,5 @@ git status
   git push origin :refs/tags/v0.9	//删除远程标签
   ```
 
+
+测试推送到两个不同的仓库
