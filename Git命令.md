@@ -211,5 +211,12 @@ git status
   git push origin --delete dev
   ```
 
+* #### Rebase
+
+  ```
+  Git rebase   在push之前操作 
+  把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。
+  ```
+
   
 
