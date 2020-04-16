@@ -1,6 +1,6 @@
 ## Git命令
 
-###### 设置用户名和邮箱地址
+### 设置用户名和邮箱地址
 
 ```
 $ git config --global user.name "Your Name"
@@ -8,29 +8,33 @@ $ git config --global user.email "email@example.com"
 ```
 
 
-###### Git初始化
+### Git初始化
 
 ```
 git init
 ```
 
-###### Git添加文件
+### Git添加文件
+
 * 添加单个文件  
+
 ```
 git add readme.txt
 ```
+
 *  添加所有文件
+
 ```java
 git add .
 ```
 
-###### Git查看状态
+### Git查看状态
 
 ```
 git status
 ```
 
-###### Git修改操作
+### Git修改操作
 
 * 查看版本历史记录
 
@@ -281,4 +285,41 @@ git status
   git push origin :refs/tags/v0.9	//删除远程标签
   ```
 
+### 添加忽略文件
+
+* 强制添加已经被忽略的文件 `-f`
+
+  ```
+  git add -f App.class
+  ```
+
+* 检查忽略文件规则    `git check-ignore`
+
+  ```
+  $ git check-ignore -v App.class
+  .gitignore:3:*.class	App.class
+  ```
+
+  `.gitignore`文件本身要放到版本库里，并且可以对`.gitignore`做版本管理
+
+### 配置别名
+
+* ```
+  我们只需要敲一行命令，告诉Git，以后st就表示status：
+  $ git config --global alias.st status
+  ```
+
+  每个仓库的Git配置文件都放在`.git/config`文件中：
+
+  ```
+  $ cat .git/config 
+  ```
+
+  而当前用户的Git配置文件放在用户主目录下的一个隐藏文件`.gitconfig`中：
+
+  ```
+  $ cat .gitconfig
+  ```
+
+  
 
